@@ -1,5 +1,5 @@
 from abc import ABC
-from typing import Any, Dict, Optional, Union
+from typing import Any, Dict, Iterator, Optional, Union
 
 class SequenceDataAbstractBaseClass(ABC):
     ...
@@ -29,6 +29,10 @@ class Seq:
         old: Union[str, _SeqAbstractBaseClass],
         new: Union[str, _SeqAbstractBaseClass]
     ) -> 'Seq':...
+
+    def __iter__(self) -> Iterator[str]: ...
+
+    def __getitem__(self, index: int) -> str: ...
 
 class MutableSeq:
     ...
