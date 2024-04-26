@@ -7,7 +7,7 @@ _AnnotationsDictValue = Union[str, int]
 _AnnotationsDict = Dict[str, _AnnotationsDictValue]
 
 class SeqRecord:
-    _id: str
+    id: str
     _seq: Seq
 
     def __init__(
