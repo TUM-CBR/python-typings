@@ -1,0 +1,9 @@
+from typing import Optional, Sequence, TextIO
+
+from Bio.Entrez.Parser import EntrezElement
+
+def esearch(db: str, term: str, retmax: int = ...) -> TextIO: ...
+
+def esummary(db: str, id: Sequence[str]) -> TextIO: ...
+
+def read(source: TextIO, validate: bool = ..., escape: bool = ..., ignore_errors:str = ...) -> Optional[EntrezElement]: ...
